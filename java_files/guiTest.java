@@ -1,7 +1,12 @@
 package java_files;
 import javax.swing.*;
 import java.awt.*;
-class guiTest {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class guiTest {
     public static void main(String args[]) {
 
         //Creating the Frame
@@ -9,6 +14,10 @@ class guiTest {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 600);
 
+        JLayeredPane lp = new JLayeredPane();
+        JPanel p = new JPanel();
+        p.setBackground(Color.RED);
+        p.setBounds(0,0,600,600);
         //Creating the panel at bottom and adding components
         JPanel panel = new JPanel(); // the panel is not visible in output
         JLabel label = new JLabel("Enter Text");
@@ -22,9 +31,12 @@ class guiTest {
         panel.add(send);
         panel.add(reset);
         panel.add(clear);
+        lp.add(p, JLayeredPane.DEFAULT_LAYER);
+        lp.add(panel, JLayeredPane.POPUP_LAYER);
 
         // Text Area at the Center
         JTextArea ta = new JTextArea();
+        ta.setBounds(50, 50, 100, 100);
 
         send.addActionListener(e -> {
             ta.append(tf.getText());
@@ -36,6 +48,24 @@ class guiTest {
             ta.setText("");
         });
 
+        tf.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    ta.append(tf.getText());
+                    ta.append("\n");
+                    tf.setText("");
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+            }
+        });
         //Adding Components to the frame.
         frame.getContentPane().add(BorderLayout.SOUTH, panel);
         frame.getContentPane().add(BorderLayout.CENTER, ta);
