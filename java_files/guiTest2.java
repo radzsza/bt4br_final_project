@@ -8,12 +8,12 @@ public class guiTest2 {
         // Creating a new JPanel - size 200x200
         JPanel panel1 = new JPanel();
         panel1.setBackground(Color.BLACK); //set panel background color to black
-        panel1.setBounds(100, 100, 200, 200); // top left corner should be in (100, 100) point
+        panel1.setBounds(50, 50, 200, 200); // top left corner should be in (100, 100) point
         // about 1/5th of the window in both dimensions
 
         // new JPanel - size 200x200
         JPanel panel2 = new JPanel();
-        panel2.setBounds(50, 50, 200, 200); //left corner in (50, 50), about 1/10th
+        panel2.setBounds(100, 100, 200, 200); //left corner in (50, 50), about 1/10th
         panel2.setBackground(Color.RED); // background color red (so the whole panel)
 
         // creating a JButton
@@ -25,9 +25,11 @@ public class guiTest2 {
         layeredPane.setBounds(0, 0, 500, 500);
         // adding both panes and the button
         // I still have to figure out how layering works, but I got the basics
-        layeredPane.add(panel1, JLayeredPane.DEFAULT_LAYER);
+        // I don't know how the layering works if you set all of them in the same layer
+        // In other situations hierarchy works just fine
+        layeredPane.add(panel1, JLayeredPane.MODAL_LAYER);
         layeredPane.add(panel2, JLayeredPane.DEFAULT_LAYER);
-        layeredPane.add(button, JLayeredPane.DEFAULT_LAYER);
+        layeredPane.add(button, JLayeredPane.POPUP_LAYER);
 
         // new JFrame, size 500x500
         JFrame frame = new JFrame();
