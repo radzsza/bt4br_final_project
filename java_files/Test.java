@@ -1,4 +1,6 @@
 // trying to understand java GridBagLayout (hopefully)
+// to jest czysta prowizorka, pobaw się
+// jeszcze nie skończyłam ofc
 package java_files;
 
 import javax.swing.*;
@@ -23,34 +25,70 @@ public class Test {
         });
     }
 
+    public class MyJButton extends JButton {
+        public MyJButton(String text) {
+            super();
+            setText(text);
+        }
+    }
+
     public class TestPane extends JPanel {
 
         public TestPane() {
             setPreferredSize(new Dimension(500, 500)); // making it bigger size
             setLayout(new GridBagLayout()); // just set the layout manager
             GridBagConstraints gbc = new GridBagConstraints(); // kinda makes the layout working
+            // setting layout size
             gbc.gridwidth = 3;
             gbc.gridheight = 3;
             //gbc.fill = GridBagConstraints.HORIZONTAL;
 
+            JLabel label = new JLabel("Hi");
             gbc.gridx = 1;
-            gbc.weighty = 0.0;
-            add(new JButton("Up"), gbc);
-            gbc.anchor = GridBagConstraints.PAGE_START;
-            gbc.gridx = 0;
+            gbc.gridy = 1;
+            gbc.weightx = 0.5;
             gbc.weighty = 0.5;
-            add(new JButton("Left"), gbc);
-            gbc.anchor = GridBagConstraints.PAGE_END;
-            gbc.gridx = 2;
-            gbc.weighty = 0.5;
-            add(new JButton("Right"), gbc);
-            gbc.anchor = GridBagConstraints.PAGE_END;
-            //gbc.insets = new Insets(10,0,0,0);
-            gbc.gridx = 1;
-            gbc.weighty = 1.0;
-            add(new JButton("Down"), gbc);
-        }
+            gbc.anchor = GridBagConstraints.CENTER;
+            add(label, gbc);
 
+            JButton button = new JButton("LU");
+            gbc.gridx = 0;
+            gbc.gridy = 0;
+            gbc.weighty = 0;
+            gbc.weightx = 0;
+            gbc.anchor = GridBagConstraints.FIRST_LINE_START;
+            add(button, gbc); // left upper corner
+
+            gbc.gridx = 3;
+            gbc.gridy = 0;
+            gbc.weighty = 0;
+            gbc.weightx = 1;
+            gbc.anchor = GridBagConstraints.FIRST_LINE_END;
+            button = new JButton("RU");
+            add(button, gbc); // right upper corner
+
+            gbc.gridx = 0;
+            gbc.gridy = 3;
+            gbc.weighty = 1;
+            gbc.weightx = 0;
+            gbc.anchor = GridBagConstraints.LAST_LINE_START;
+            button = new JButton("LB");
+            add(button, gbc); // left bottom corner
+
+            gbc.gridx = 3;
+            gbc.gridy = 3;
+            gbc.weighty = 1;
+            gbc.weightx = 1;
+            // gbc.ipady = 40;
+            gbc.anchor = GridBagConstraints.LAST_LINE_END;
+            button = new JButton("RB");
+            add(button, gbc); // right bottom corner
+
+            // Będę próbowała dodać default action listenera, żeby tekst na środku się zmieniał
+            //button.addActionListener(e -> {
+            //   label.setText(button.getText());
+            //});
+        }
     }
 
 }
