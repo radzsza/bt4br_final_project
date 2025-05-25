@@ -12,3 +12,7 @@ Ola:
 
 Anastazja:
 * fabula?
+* obrazki
+	- start button
+	- jeszcze nie wiem czy chcemy, zeby mail byl obrazkiem ale potencjalnie
+	- wykresy
