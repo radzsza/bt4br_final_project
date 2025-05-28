@@ -8,11 +8,14 @@ Elementy fabuly:
 * koncowy efekt
 
 Ola:
-* zdekompilowac i zanalizowac kod minecrafta
+* username  
+* plot rendering interface  
+* card layout - switching panels  
 
-Anastazja:
-* fabula?
-* obrazki
-	- start button
-	- jeszcze nie wiem czy chcemy, zeby mail byl obrazkiem ale potencjalnie
-	- wykresy
+Anastazja:  
+* wykresy przykładowe - iris dataset?  
+* zrobić wykresy poglądowe - TPMs_genes  
+* napisać draft maila "i just hate making plots"  
+* grafika w tle - w tym któraś z już istniejących z wyświetlonym mailem na laptopie  
+* mail zwrotny - "please redo the plots"  
+* przeczytać kod i pobawić się nim - na razie jedyny działający przycisk to exit, ale ciii
