@@ -1,32 +1,55 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class MainMenu extends JPanel {
-    public MainMenu() {
+
+    public MainMenu(){
         setOpaque(false);
-        //setOpaque(false);
         setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
 
-        c.gridx = 2;
-        c.gridy = 1;
+        c.gridx = 1;
+        c.gridy = 0;
+        c.gridwidth = 3;
         c.anchor = GridBagConstraints.PAGE_END;
         c.weighty = 1;
-        JButton startButton = new JButton("Start");
-        startButton.setFont(new Font("Serif", Font.BOLD, 40));
-        startButton.setPreferredSize(new Dimension(500, 250));
-        //startButton.setBorderPainted(false);
-        startButton.setFocusPainted(false);
-
+        JButton startButton = new Button("START", new Dimension(700, 250), 60);
         add(startButton, c);
 
-        c.gridy = 2;
+        c.fill = GridBagConstraints.NONE;
+
+        c.weightx = 0;
+        c.gridx = 1;
+        c.gridy = 1;
         c.ipady = 30;
+        c.anchor = GridBagConstraints.LINE_START;
+        JButton githubButton = new Button("GITHUB", new Dimension(200, 50), 25);
+        add(githubButton, c);
+
+        c.gridx = 2;
         c.anchor = GridBagConstraints.CENTER;
-        JButton exitButton = new JButton("Exit");
-        exitButton.setPreferredSize(new Dimension(300, 50));
-        exitButton.setFocusPainted(false);
+
+        JButton aboutButton = new Button("ABOUT", new Dimension(200, 50), 25);
+        add(aboutButton, c);
+
+
+        c.gridx = 3;
+        c.anchor = GridBagConstraints.LINE_END;
+        JButton exitButton = new Button("EXIT", new Dimension(200, 50), 25);
         add(exitButton, c);
+    }
+
+    private void setButtonAesthetics(JButton button, int fontSize, Dimension size) {
+        button.setPreferredSize(size);
+        button.setFont(new Font("Monocraft", Font.BOLD, fontSize));
+        button.setFocusPainted(false);
+        button.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 3));
+        button.setBackground(Color.GRAY);
+        button.setForeground(Color.WHITE);
     }
 
     @Override
@@ -35,4 +58,6 @@ public class MainMenu extends JPanel {
         super.paintComponent(g);
         g.drawImage(new ImageIcon("img/startbutton.PNG").getImage(), 0, 0, 0, 0, null);
     }
+
+
 }

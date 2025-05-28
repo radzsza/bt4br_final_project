@@ -6,6 +6,7 @@ import java.util.Objects;
 public class Background1 extends JPanel {
 
      public Background1() {
+
      }
 
     @Override
