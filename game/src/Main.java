@@ -9,9 +9,10 @@ public class Main {
         setFont();
         JFrame frame = new JFrame();
         frame.setPreferredSize(new Dimension(1600, 900));
-        JPanel mainMenu = new MainMenu();
+
         JPanel cards = new JPanel(new CardLayout());
         cards.add(new MainMenu(), "MainMenu");
+        cards.add(new Username(), "Username");
         frame.getContentPane().add(cards);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();

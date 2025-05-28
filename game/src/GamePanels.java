@@ -9,7 +9,7 @@ public class GamePanels extends JPanel {
             setLayout(new GridBagLayout());
             GridBagConstraints c = new GridBagConstraints();
 
-            JLabel mail = new JLabel(); // image of the mail or custom font?
+            JLabel mail = new JLabel(); // mail to insert
             setPreferredSize(new Dimension(100, 100));
         }
     }

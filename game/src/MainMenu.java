@@ -8,6 +8,8 @@ public class MainMenu extends JPanel {
     private JButton aboutButton;
     private JButton exitButton;
 
+    private JPanel contentPane;
+
     public MainMenu(){
         setOpaque(false);
         setLayout(new GridBagLayout());
@@ -21,10 +23,12 @@ public class MainMenu extends JPanel {
         startButton = new Button("START", new Dimension(700, 250), 60);
         add(startButton, c);
 
-        startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
+        startButton.addActionListener( new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                CardLayout cardLayout = (CardLayout) contentPane.getLayout();
+                cardLayout.next(contentPane);
             }
         });
 
@@ -60,6 +64,5 @@ public class MainMenu extends JPanel {
         super.paintComponent(g);
         g.drawImage(new ImageIcon("img/obrazek_piwnica.png").getImage(), 0, 0, getWidth(), getHeight(), this);
     }
-
 
 }
