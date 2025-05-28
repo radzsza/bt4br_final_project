@@ -58,11 +58,19 @@ public class MainMenu extends JPanel {
             }
         });
     }
+    /**
+    public MainMenu(int x){
+        JLabel label = new JLabel(new ImageIcon("img/points.png"));
+        label.setOpaque(true);
+        label.setBackground(Color.BLUE);
+        add(label, BorderLayout.CENTER);
+    }
+     **/
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(new ImageIcon("img/obrazek_piwnica.png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(new ImageIcon("img/background_meme.png").getImage(), 0, 0, getWidth(), getHeight(), this);
     }
 
 }
