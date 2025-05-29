@@ -6,7 +6,7 @@ public class Button extends JButton {
 
     @Override
     public void paintComponent(Graphics g) {
-        g.drawImage(new ImageIcon("img/buttom.png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(new ImageIcon("img/button.png").getImage(), 0, 0, getWidth(), getHeight(), this);
         super.paintComponent(g);
     }
 
@@ -26,6 +26,6 @@ public class Button extends JButton {
         // TODO add mouse listener, so the button graphically reacts to clicking and mouse movement
     }
 
-    ///*
+    // /*
     //*/
 }

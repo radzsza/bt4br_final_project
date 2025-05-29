@@ -1,3 +1,5 @@
+// code from https://stackoverflow.com/questions/11648208/switch-panels-in-a-jframe
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
