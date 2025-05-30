@@ -1,12 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class Username extends JPanel {
     private String username;
 
-    // TODO move buttons to the right lower corner, add components private fields
-    // add a label instructing to enter their name
-    // change the name of loginButton to clearButton
+    // TODO add return button in the lt corner
     // add a label greeting a player (if I have time)
 
     public Username(JPanel contentPane, Main main) {
@@ -16,34 +15,65 @@ public class Username extends JPanel {
 
         c.gridx = 0;
         c.gridy = 0;
-        c.gridwidth = 2;
-        c.weighty = 1;
+        JLabel usernameLabel = new JLabel("Username:");
+        usernameLabel.setFont(new Font("Monospaced", Font.PLAIN, 25));
+        c.insets = new Insets(0, 0, 5,0);
+        add(usernameLabel, c);
+
+        c.gridy = 1;
+        c.gridwidth = 3;
+
         c.fill = GridBagConstraints.HORIZONTAL;
-        c.anchor = GridBagConstraints.PAGE_END;
+        c.anchor = GridBagConstraints.LAST_LINE_START;
         JTextField usernameField = new JTextField();
-        usernameField.setFont(new Font("Monospaced", Font.PLAIN, 35));
-        usernameField.setPreferredSize(new Dimension(450, 80));
+        usernameField.setFont(new Font("Monospaced", Font.PLAIN, 25));
+        usernameField.setPreferredSize(new Dimension(500, 50));
         usernameField.setEditable(true);
         usernameField.setBackground(Color.WHITE);
 
         add(usernameField, c);
 
-        c.gridx = 0;
-        c.gridy = 1;
-        //c.weighty = 1;
-        c.weighty = 1;
-        c.anchor = GridBagConstraints.LINE_START;
         c.fill = GridBagConstraints.NONE;
-        JButton loginButton = new Button("Clear", new Dimension(200, 100), 20);
-        add(loginButton, c);
 
-        c.gridy = 1;
+        c.gridy = 2;
+        c.anchor = GridBagConstraints.CENTER;
+        c.insets = new Insets(10, 10, 10, 0);
+        JButton clearButton = new Button("CLEAR", new Dimension(150, 60), 20);
+
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                usernameField.setText("");
+            }
+        });
+
+        add(clearButton, c);
+
         c.gridx = 1;
-        //c.weightx = 1;
-        c.weighty = 1;
-        c.anchor = GridBagConstraints.LINE_END;
-        JButton startButton = new Button("Start game", new Dimension(200, 100), 20);
+        c.gridy = 2;
+        c.insets = new Insets(10, 10, 10, 0);
+        //c.weighty = 0.5;
+        c.anchor = GridBagConstraints.FIRST_LINE_END;
+        JButton startButton = new Button("START", new Dimension(150, 60), 20);
+
+        startButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (usernameField.getText().equals("")) {
+                    username = "Student"
+                } else {
+                    username = usernameField.getText();
+                }
+                CardLayout cardLayout = (CardLayout) contentPane.getLayout();
+                cardLayout.show(contentPane, "game 1");
+            }
+        });
+
         add(startButton, c);
+    }
+
+    public String getUsername() {
+        return username;
     }
 
 }
