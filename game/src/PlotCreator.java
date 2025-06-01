@@ -22,13 +22,12 @@ public class PlotCreator extends JPanel {
         // PLOT
         c.gridx = 1;
         c.gridy = 0;
-        c.gridheight = 8;
+        c.gridheight = 9;
         //c.weightx = 1;
         c.insets = new Insets(30, 50, 30, 30);
         c.anchor = GridBagConstraints.FIRST_LINE_END;
-        ImageIcon plot = getPlot("points");
-        JLabel plotLabel = new JLabel(plot);
-        plotLabel.setBackground(Color.BLACK);
+        PlotLabel plotLabel = new PlotLabel("viridis", "minimal", plotNumber);
+        plotLabel.setMonoBackground(Color.PINK);
         plotLabel.setOpaque(true);
         add(plotLabel, c);
 
@@ -44,6 +43,9 @@ public class PlotCreator extends JPanel {
         c.insets = new Insets(0, 30, 10, 10);
         c.anchor = GridBagConstraints.LINE_START;
         JComboBox<String> themeComboBox = new ComboBox(themeOptions);
+        themeComboBox.addActionListener(e -> {
+           plotLabel.setTheme(themeComboBox.getSelectedItem().toString().toLowerCase());
+        });
         add(themeComboBox, c);
 
         c.gridy = 6;
@@ -56,7 +58,9 @@ public class PlotCreator extends JPanel {
         c.anchor = GridBagConstraints.LINE_START;
         c.insets = new Insets(0, 30, 10, 10);
         JComboBox<String> colorChoice = new ComboBox(monocolorOptions);
-        // needs debugging
+        colorChoice.addActionListener(e -> {
+            plotLabel.setMonoBackground(MyColor.getColor(colorChoice.getSelectedItem().toString()));
+        });
 
         add(colorChoice, c);
 
@@ -80,20 +84,22 @@ public class PlotCreator extends JPanel {
         JRadioButton conditionBasedRadioButton = new RadioButton("CONDITION BASED", rbg, colorChoice, conditionBasedOptions);
         add(conditionBasedRadioButton, c);
 
+        /*
         c.gridy = 8;
-        c.anchor = GridBagConstraints.LINE_START;
+        c.anchor = GridBagConstraints.FIRST_LINE_END;
         c.insets = new Insets(30, 30, 10, 10);
-        Button applyButton = new Button("APPLY", new Dimension(220, 70), 20);
-        applyButton.setPlotCreatorAesthetics();
+        Button applyButton = new Button("APPLY", new Dimension(400, 100), 20);
+        //applyButton.setPlotCreatorAesthetics();
         add(applyButton, c);
+         */
 
         c.gridx = 1;
         c.gridy = 9;
         c.weighty = 1;
         c.weightx = 1;
-        c.insets = new Insets(10, 10, 10, 10);
-        c.anchor = GridBagConstraints.LAST_LINE_END;
-        Button nextButton = new Button("NEXT", new Dimension(220, 70), 20);
+        c.insets = new Insets(0, 30, 50, 50);
+        c.anchor = GridBagConstraints.LINE_END;
+        Button nextButton = new Button("NEXT", new Dimension(200, 80), 20);
         nextButton.setPlotCreatorAesthetics();
         if (plotNumber == 2) {
             nextButton.setText("SAVE");

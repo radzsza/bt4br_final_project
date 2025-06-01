@@ -4,7 +4,9 @@ import java.awt.*;
 public class PlotLabel extends JLabel {
     private String colorPalette;
     private String theme;
+    private final int plotNumber;
 
+    /*
     public static void main(String[] args) {
 
         // JLayeredPane = Swing container that provides a
@@ -43,12 +45,25 @@ public class PlotLabel extends JLabel {
         frame.setVisible(true);
     }
 
+    public static void main (String[] args) {
+        JFrame frame = new JFrame("Plot Label");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setPreferredSize(new Dimension(500, 500));
+        JLabel pl = new PlotLabel("viridis", "minimal", 0);
+        //pl.setBackground(Color.BLACK);
+        frame.getContentPane().add(pl);
+        frame.pack();
+        frame.setVisible(true);
+    }
+    */
+
     public PlotLabel(String colorPalette, String theme, int plotNumber) {
         this.colorPalette = colorPalette;
         this.theme = theme;
-        setOpaque(true);
-        setIcon(new ImageIcon("img/" + theme + plotNumber + ".png"));
-        setPreferredSize(new Dimension(500, 500));
+        this.plotNumber = plotNumber;
+        setPreferredSize(new Dimension(1003, 647));
+        setIcon(new ImageIcon("img/plot_images/" + theme + plotNumber + ".png"));
+        //setPreferredSize(new Dimension(500, 500));
     }
 
     public void setColorPalette(String colorPalette) {
@@ -57,6 +72,16 @@ public class PlotLabel extends JLabel {
 
     public void setTheme(String theme) {
         this.theme = theme;
+        setIcon(new ImageIcon("img/plot_images/" + theme + plotNumber + ".png"));
+    }
+
+    public void setMonoBackground(Color color) {
+        setBackground(color);
+        setOpaque(false);
+    }
+
+    public void setConditionBasedBackground() {
+        setOpaque(true);
     }
 
     @Override
