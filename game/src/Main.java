@@ -9,20 +9,6 @@ public class Main {
         setFont();
         Main main = new Main();
         main.displayGUI();
-        /*
-        JFrame frame = new JFrame();
-        frame.setPreferredSize(new Dimension(1600, 900));
-
-
-        JPanel cards = new JPanel(new CardLayout());
-
-        //cards.add(new MainMenu(), "MainMenu");
-        cards.add(new Username(), "Username");
-        frame.getContentPane().add(cards);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-         */
     }
 
     // method to display GUI using cardLayout (allows to switch frames)
@@ -32,11 +18,13 @@ public class Main {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         JPanel contentPane = new JPanel(new CardLayout());
-        JPanel mainMenu = new MainMenu(contentPane, this);
-        JPanel username = new Username(contentPane, this);
+        JPanel mainMenu = new MainMenu(contentPane);
+        JPanel username = new Username(contentPane);
+        JPanel plotCreation = new PlotCreator(contentPane, "BOXPLOT", 0);
 
         contentPane.add(mainMenu, "main menu");
         contentPane.add(username, "username");
+        contentPane.add(plotCreation, "plot creation 1");
 
         frame.getContentPane().add(contentPane);
         frame.pack();

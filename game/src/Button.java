@@ -1,8 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
+import java.awt.event.*;
 
 public class Button extends JButton {
+    private int fontSize;
+    private Dimension size;
+    private String text;
 
     @Override
     public void paintComponent(Graphics g) {
@@ -11,21 +14,27 @@ public class Button extends JButton {
     }
 
     public Button(String text, Dimension size, int fontSize) {
+        this.text = text;
         setText(text);
+        setFocusPainted(false);
+        setDefaultAesthetics();
+        // TODO add mouse listener, so the button graphically reacts to clicking and mouse movement in default aesthetics
+    }
+
+    public void setDefaultAesthetics() {
         setOpaque(true);
         setContentAreaFilled(false);
         setBorderPainted(false);
-        // previous graphical settings (rendered purely with java colors)
-        //setBackground(Color.GRAY);
-        //setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 4));
         setPreferredSize(size);
         setFont(new Font("Monocraft", Font.BOLD, fontSize));
         setForeground(Color.WHITE);
-        setFocusPainted(false);
-
-        // TODO add mouse listener, so the button graphically reacts to clicking and mouse movement
     }
 
-    // /*
-    //*/
+    public void setPlotCreatorAesthetics() {
+        setBackground(Color.GRAY);
+        setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 4));
+        setForeground(Color.WHITE);
+        setFont(new Font("Monospaced", Font.PLAIN, 12));
+        setBorderPainted(true);
+    }
 }
