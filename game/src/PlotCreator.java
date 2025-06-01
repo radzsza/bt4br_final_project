@@ -73,15 +73,21 @@ public class PlotCreator extends JPanel {
         c.gridy = 4;
         c.anchor = GridBagConstraints.LINE_START;
         c.insets = new Insets(0, 30, 10, 10);
-        JRadioButton monocolorRadioButton = new RadioButton("MONOCOLOR", rbg, colorChoice, monocolorOptions);
+        JRadioButton monocolorRadioButton = new RadioButton("MONOCOLOR", rbg);
         monocolorRadioButton.setSelected(true);
+        monocolorRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //colorChoice = new ComboBox(monocolorOptions);
+            }
+        });
 
         add(monocolorRadioButton, c);
 
         c.gridy = 5;
         c.anchor = GridBagConstraints.LINE_START;
         c.insets = new Insets(0, 30, 10, 10);
-        JRadioButton conditionBasedRadioButton = new RadioButton("CONDITION BASED", rbg, colorChoice, conditionBasedOptions);
+        JRadioButton conditionBasedRadioButton = new RadioButton("CONDITION BASED", rbg);
         add(conditionBasedRadioButton, c);
 
         /*

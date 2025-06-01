@@ -77,7 +77,7 @@ public class PlotLabel extends JLabel {
 
     public void setMonoBackground(Color color) {
         setBackground(color);
-        setOpaque(false);
+        setOpaque(true);
     }
 
     public void setConditionBasedBackground() {

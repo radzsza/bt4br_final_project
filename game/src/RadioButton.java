@@ -4,19 +4,10 @@ import java.awt.event.*;
 
 public class RadioButton extends JRadioButton {
 
-    public RadioButton(String label, ButtonGroup buttonGroup, JComboBox<String> controledJComboBox, String[] comboBoxOptions) {
+    public RadioButton(String label, ButtonGroup buttonGroup) {
         setText(label);
         setFont(new Font("Monocraft", Font.BOLD, 20));
         setFocusPainted(false);
         buttonGroup.add(this);
-        addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controledJComboBox.removeAllItems();
-                for (String item : comboBoxOptions) {
-                    controledJComboBox.addItem(item);
-                }
-            }
-        });
     }
 }
