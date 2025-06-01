@@ -15,8 +15,11 @@ public class Button extends JButton {
 
     public Button(String text, Dimension size, int fontSize) {
         this.text = text;
+        this.fontSize = fontSize;
+        this.size = size;
         setText(text);
         setFocusPainted(false);
+        setPreferredSize(size);
         setDefaultAesthetics();
         // TODO add mouse listener, so the button graphically reacts to clicking and mouse movement in default aesthetics
     }
@@ -25,7 +28,6 @@ public class Button extends JButton {
         setOpaque(true);
         setContentAreaFilled(false);
         setBorderPainted(false);
-        setPreferredSize(size);
         setFont(new Font("Monocraft", Font.BOLD, fontSize));
         setForeground(Color.WHITE);
     }
@@ -33,7 +35,6 @@ public class Button extends JButton {
     public void setPlotCreatorAesthetics() {
         setBackground(Color.GRAY);
         setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 4));
-        setForeground(Color.WHITE);
         setFont(new Font("Monospaced", Font.PLAIN, 12));
         setBorderPainted(true);
     }

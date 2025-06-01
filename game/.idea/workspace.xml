@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66ac522f-e109-47d6-8ad5-fb68177f1075" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ComboBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Label.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RadioButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/game.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlotCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Username.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Username.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../out/production/final_project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/final_project/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../out/production/final_project/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/final_project/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../out/production/final_project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/final_project/README.md" afterDir="false" />
@@ -71,7 +60,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -98,9 +87,9 @@
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.32994187" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Services" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.33023483" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.33023483" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.32994187" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.33023483" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.33023483" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.33023483" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
@@ -120,14 +109,6 @@
       </method>
     </configuration>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-af73d4d897b0-intellij.indexing.shared.core-IU-252.13776.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-43a09073042e-JavaScript-IU-252.13776.59" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="66ac522f-e109-47d6-8ad5-fb68177f1075" name="Changes" comment="" />
@@ -146,7 +127,8 @@
       <workItem from="1748767850167" duration="44000" />
       <workItem from="1748768097218" duration="11732000" />
       <workItem from="1748787710438" duration="168000" />
-      <workItem from="1748787910795" duration="1244000" />
+      <workItem from="1748787910795" duration="2395000" />
+      <workItem from="1748790527636" duration="443000" />
     </task>
     <servers />
   </component>
