@@ -66,7 +66,7 @@ public class MainMenu extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(new ImageIcon("img/background_meme.png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(new ImageIcon("img/background_images/background_meme.png").getImage(), 0, 0, getWidth(), getHeight(), this);
     }
 
 }

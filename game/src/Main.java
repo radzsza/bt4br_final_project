@@ -33,7 +33,7 @@ public class Main {
 
     private static void setFont(){
         try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("/home/ola/final_project/game/font/Monocraft-Bold-05.ttf")).deriveFont(12f);
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("font/Monocraft-Bold-05.ttf")).deriveFont(12f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(customFont);
         } catch (FontFormatException | IOException e) {

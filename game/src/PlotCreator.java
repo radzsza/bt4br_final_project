@@ -4,8 +4,8 @@ import java.awt.event.*;
 
 public class PlotCreator extends JPanel {
     final private String[] monocolorOptions = {"BLACK", "WHITE", "RED", "BLUE", "GREEN", "YELLOW", "PINK"};
-    final private String[] conditionBasedOptions = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
-    final private String[] themeOptions = {"c", "d", "e", "f", "g", "h", "i", "j"};
+    final private String[] conditionBasedOptions = {"VIRIDIS", "MAGMA", "PLASMA", "INFERNO"};
+    final private String[] themeOptions = {"MINIMAL", "d", "e", "f", "g", "h", "i", "j"};
 
     public PlotCreator(JPanel contentPane, String plotTypeName, int plotNumber) {
         setLayout(new GridBagLayout());
@@ -57,18 +57,7 @@ public class PlotCreator extends JPanel {
         c.insets = new Insets(0, 30, 10, 10);
         JComboBox<String> colorChoice = new ComboBox(monocolorOptions);
         // needs debugging
-        colorChoice.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Color bgColor;
-                if (colorChoice.getSelectedItem() == null) {
-                    bgColor = plotLabel.getBackground();
-                } else {
-                    bgColor = MyColor.getColor(colorChoice.getSelectedItem().toString());
-                }
-                plotLabel.setBackground(bgColor);
-            }
-        });
+
         add(colorChoice, c);
 
         ButtonGroup rbg = new ButtonGroup();
@@ -80,7 +69,7 @@ public class PlotCreator extends JPanel {
         c.gridy = 4;
         c.anchor = GridBagConstraints.LINE_START;
         c.insets = new Insets(0, 30, 10, 10);
-        JRadioButton monocolorRadioButton = new RadioButton("MONOCOLOR", rbg, colorChoice, monocolorOptions, colorLabel);
+        JRadioButton monocolorRadioButton = new RadioButton("MONOCOLOR", rbg, colorChoice, monocolorOptions);
         monocolorRadioButton.setSelected(true);
 
         add(monocolorRadioButton, c);
@@ -88,7 +77,7 @@ public class PlotCreator extends JPanel {
         c.gridy = 5;
         c.anchor = GridBagConstraints.LINE_START;
         c.insets = new Insets(0, 30, 10, 10);
-        JRadioButton conditionBasedRadioButton = new RadioButton("CONDITION BASED", rbg, colorChoice, conditionBasedOptions, colorLabel);
+        JRadioButton conditionBasedRadioButton = new RadioButton("CONDITION BASED", rbg, colorChoice, conditionBasedOptions);
         add(conditionBasedRadioButton, c);
 
         c.gridy = 8;

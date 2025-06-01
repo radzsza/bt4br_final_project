@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class RadioButton extends JRadioButton {
 
-    public RadioButton(String label, ButtonGroup buttonGroup, JComboBox<String> controledJComboBox, String[] comboBoxOptions, JLabel comboBoxLabel) {
+    public RadioButton(String label, ButtonGroup buttonGroup, JComboBox<String> controledJComboBox, String[] comboBoxOptions) {
         setText(label);
         setFont(new Font("Monocraft", Font.BOLD, 20));
         setFocusPainted(false);
