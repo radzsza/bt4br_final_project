@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66ac522f-e109-47d6-8ad5-fb68177f1075" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MyColor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComboBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComboBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/final_project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/final_project/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/final_project/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/final_project/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/final_project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/final_project/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/final_project/java_files/guiTest2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/final_project/java_files/guiTest2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/final_project/pictures/obrazek_piwnica.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/final_project/pictures/z memem.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlotCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RadioButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadioButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,31 +36,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CardLayoutExample.executor": "Run",
-    "Application.Client.executor": "Run",
-    "Application.FlowLayoutDemo.executor": "Run",
-    "Application.GridBagLayoutImplement.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.TestFrame.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ola/final_project/game",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CardLayoutExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FlowLayoutDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GridBagLayoutImplement.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestFrame.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ola/final_project/game&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" side_tool="true" />
@@ -73,7 +68,7 @@
       <window_info id="Backup and Sync History" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25156742" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25162762" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="3" weight="0.32993728" />
@@ -81,17 +76,18 @@
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Profiler" />
       <window_info anchor="bottom" id="File Transfer" />
-      <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" weight="0.32994187" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.3302696" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Services" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.33023483" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.32994187" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.33023483" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.3302696" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.3302696" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3302696" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.33023483" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.3302696" />
       <window_info anchor="right" id="Endpoints" />
+      <window_info anchor="right" id="documentation.v2" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
@@ -129,6 +125,8 @@
       <workItem from="1748787710438" duration="168000" />
       <workItem from="1748787910795" duration="2395000" />
       <workItem from="1748790527636" duration="443000" />
+      <workItem from="1748791057464" duration="377000" />
+      <workItem from="1748793751632" duration="5059000" />
     </task>
     <servers />
   </component>

@@ -12,7 +12,6 @@ public class RadioButton extends JRadioButton {
         addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                comboBoxLabel.setText(label + ": ");
                 controledJComboBox.removeAllItems();
                 for (String item : comboBoxOptions) {
                     controledJComboBox.addItem(item);

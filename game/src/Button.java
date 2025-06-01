@@ -33,9 +33,10 @@ public class Button extends JButton {
     }
 
     public void setPlotCreatorAesthetics() {
+        setContentAreaFilled(true);
         setBackground(Color.GRAY);
         setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 4));
-        setFont(new Font("Monospaced", Font.PLAIN, 12));
+        setFont(new Font("Monocraft", Font.BOLD, fontSize));
         setBorderPainted(true);
     }
 }

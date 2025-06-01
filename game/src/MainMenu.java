@@ -9,7 +9,7 @@ public class MainMenu extends JPanel {
     private JButton aboutButton;
     private JButton exitButton;
     private JPanel contentPane;
-*/
+    */
 
     public MainMenu(JPanel contentPane) {
         setLayout(new GridBagLayout());
