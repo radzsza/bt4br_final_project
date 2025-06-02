@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66ac522f-e109-47d6-8ad5-fb68177f1075" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BackgroundPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TextfileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/background_images/version_2_2_last.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MailPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MailPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/Density.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/barplot_bad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/barplot_good.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/boxplot_bad_pink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/boxplot_goood.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/heatmap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/heatmap_bad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/histogram_zly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/volcano_zly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/volkano_plot_good.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackgroundPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackgroundPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MailPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlotCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Username.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Username.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +53,7 @@
     "Application.FlowLayoutDemo.executor": "Run",
     "Application.GridBagLayoutImplement.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.OpenLinkFallback.executor": "Run",
     "Application.PanelSwitcher.executor": "Run",
     "Application.PlotLabel.executor": "Run",
     "Application.PlotTest.executor": "Run",
@@ -147,7 +157,7 @@
       <workItem from="1748878368535" duration="1148000" />
       <workItem from="1748879529786" duration="837000" />
       <workItem from="1748880388307" duration="75000" />
-      <workItem from="1748880581534" duration="4167000" />
+      <workItem from="1748880581534" duration="12230000" />
     </task>
     <servers />
   </component>

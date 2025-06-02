@@ -6,6 +6,9 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class MainMenu extends JPanel {
 
@@ -17,9 +20,9 @@ public class MainMenu extends JPanel {
         GridBagConstraints c = new GridBagConstraints();
 
         // setting localization
-        c.gridx = 1;
+        c.gridx = 0;
         c.gridy = 0;
-        c.gridwidth = 3;
+        c.gridwidth = 2;
         c.weighty = 1;
         c.anchor = GridBagConstraints.PAGE_END;
 
@@ -37,23 +40,34 @@ public class MainMenu extends JPanel {
         });
 
         add(startButton, c);
-
-        c.gridx = 1;
+        c.gridwidth = 1;
         c.gridy = 1;
-        c.weightx = 0;
-        c.anchor = GridBagConstraints.LINE_START;
-        JButton githubButton = new Button("GITHUB", new Dimension(200, 90), 25);
-        add(githubButton, c);
+        c.anchor = GridBagConstraints.PAGE_START;
+        c.insets = new Insets(30, 5, 5, 5);
+        JButton aboutButton = new Button("ABOUT", new Dimension(325, 90), 25);
 
-        c.gridx = 2;
-        c.anchor = GridBagConstraints.CENTER;
+        aboutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Desktop desktop = Desktop.getDesktop();
+                if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                    try {
+                        desktop.browse(new URI("https://github.com/radzsza/bt4br"));
+                    } catch (IOException | URISyntaxException ex) {
+                        ex.printStackTrace();
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Browse operation is not supported, to learn more about the project please go to https://github.com/radzsza/bt4br");
+                }
+            }
+        });
 
-        JButton aboutButton = new Button("ABOUT", new Dimension(200, 90), 25);
         add(aboutButton, c);
 
-        c.gridx = 3;
-        c.anchor = GridBagConstraints.LINE_END;
-        JButton exitButton = new Button("EXIT", new Dimension(200, 90), 25);
+        c.gridx = 1;
+        c.anchor = GridBagConstraints.PAGE_START;
+        c.insets = new Insets(30, 5, 5, 5);
+        JButton exitButton = new Button("EXIT", new Dimension(325, 90), 25);
         add(exitButton, c);
 
         exitButton.addActionListener(new ActionListener() {

@@ -1,0 +1,4 @@
+4. Boxplot with Raw Points
+
+Combining a boxplot with jittered points (left) reveals distribution and avoids hiding outliers. Right plot 
+hides raw data and uses distracting colour.

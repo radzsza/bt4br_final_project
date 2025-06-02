@@ -1,0 +1,3 @@
+5. Barplot with Standard Error
+
+Standard error bars (left) communicate uncertainty; the right plot omits them, encouraging over-interpretation.

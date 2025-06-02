@@ -1,5 +1,7 @@
-# bt4br
-Final project
+# Project outline
+
+We decided on a simple video game focused on hardships of starting with R and ggplot2 as a student. The games 
+GUI is written in Java, using Swing.
 
 Ola:
 * username - correct alignment, add labels - done  

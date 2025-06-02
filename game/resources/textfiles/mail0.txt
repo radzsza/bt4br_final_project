@@ -1,0 +1,17 @@
+Subject: Data Visualization Task
+
+From: max.ruzz@university.edu
+To: you@studentmail.com
+
+Dear Student,
+
+Please find attached the dataset. It needs to be visualized. I would do it myself, but unfortunately, my last 
+attempt with ggplot2 ended in a nervous breakdown and a corrupted R session. Your task is simple: produce a 
+clear and sensible plot using ggplot2, as long as it conveys something meaningful and does not involve 3D pie 
+charts. Do not overthink it. Just make it pretty. Or at least functional. I trust your plotting skills more than 
+I trust my patience.
+
+Best regards,
+Max Ruzz
+
+PS. I have added a short tutorial on how to do good plots for you.

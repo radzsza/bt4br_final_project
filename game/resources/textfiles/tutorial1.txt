@@ -1,0 +1,4 @@
+1. Histogram + Density Curve
+
+Overlaying a density curve (left) clarifies the distribution, whereas the right plot omits context and uses an 
+aggressive colour.

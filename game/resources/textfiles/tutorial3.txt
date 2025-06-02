@@ -1,0 +1,4 @@
+3. Gene Expression Heatmap
+
+Left: normalised rows, perceptually uniform palette. Right: raw values and black–white gradient obscure 
+patterns.

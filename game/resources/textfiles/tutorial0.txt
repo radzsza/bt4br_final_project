@@ -1,0 +1,10 @@
+Tutorial:
+Scientific Data Visualization:
+Do’s and Don’ts
+Prof. Max Ruzz
+
+Introduction
+
+Effective data visualization is not about making data look fancy; it is about telling the
+truth, clearly, efficiently, and memorably. Below you will find five pairs of visualizations,
+—each showing a good and a bad example—together with brief comments.

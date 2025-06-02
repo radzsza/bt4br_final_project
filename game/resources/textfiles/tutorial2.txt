@@ -1,0 +1,4 @@
+2. Volcano Plot 
+
+The good volcano plot displays significance thresholds and clear colouring; the bad example 
+lacks context and misleads.

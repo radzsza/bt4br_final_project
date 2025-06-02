@@ -1,0 +1,9 @@
+Summary:
+
+• Always label axes and include units.
+• Use perceptually uniform or publication-appropriate palettes.
+• Show variability (density curves, raw points, error bars) whenever possible.
+• Avoid visual clutter and misleading axis limits.
+• Start with the data, not the graphic.
+
+Happy plotting ;)
