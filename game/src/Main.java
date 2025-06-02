@@ -11,8 +11,8 @@ public class Main {
     private String user = "Student";
 
     public static void main(String[] args){
-        setFont();
         Main main = new Main();
+        main.setFont();
         main.displayGUI();
     }
 
@@ -70,9 +70,11 @@ public class Main {
     /**
      * Adds a custom font - Monocraft to available fonts
      */
-    private static void setFont(){
+    private void setFont(){
         try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("resources/font/Monocraft-Bold-05.ttf")).deriveFont(12f);
+            InputStream is = getClass().getResourceAsStream("/font/Monocraft-Bold-05.ttf");
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, is);
+            //Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("resources/font/Monocraft-Bold-05.ttf")).deriveFont(12f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(customFont);
         } catch (FontFormatException | IOException e) {

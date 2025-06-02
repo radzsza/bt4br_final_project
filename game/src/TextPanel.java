@@ -16,7 +16,7 @@ public class TextPanel extends JPanel {
      */
     public TextPanel(JPanel contentPane, String filename) {
 
-        String filePath = "resources/textfiles/" + filename + ".txt";
+        String filePath = "textfiles/" + filename + ".txt";
 
         setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
@@ -53,8 +53,8 @@ public class TextPanel extends JPanel {
      * @param plotType2 - plot type for the second column
      */
     public TextPanel(JPanel contentPane, String filename1, String filename2, String plotType1, String plotType2) {
-        String filePath1 = "resources/textfiles/" + filename1 + ".txt";
-        String filePath2 = "resources/textfiles/" + filename2 + ".txt";
+        String filePath1 = "textfiles/" + filename1 + ".txt";
+        String filePath2 = "textfiles/" + filename2 + ".txt";
 
         setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
@@ -91,30 +91,29 @@ public class TextPanel extends JPanel {
             c.gridx = 0;
             c.anchor = GridBagConstraints.CENTER;
             c.insets = new Insets(30, 15, 15, 15);
-            JLabel plot1_good = new JLabel(new ImageIcon("resources/img/plot_images/" + plotType1 + "_good.png"));
+            JLabel plot1_good = new JLabel(new ImageIcon(getClass().getResource("img/plot_images/" + plotType1 + "_good.png")));
             add(plot1_good, c);
 
             c.gridx = 1;
             c.anchor = GridBagConstraints.CENTER;
             c.insets = new Insets(30, 15, 15, 15);
-            JLabel plot1_bad = new JLabel(new ImageIcon("resources/img/plot_images/" + plotType1 + "_bad.png"));
+            JLabel plot1_bad = new JLabel(new ImageIcon(getClass().getResource("img/plot_images/" + plotType1 + "_bad.png")));
             add(plot1_bad, c);
         }
 
         // if plotType2 is not empty, generate plots
         if (!plotType2.isEmpty()) {
-            System.out.println("plotType2: " + plotType2);
             c.weightx = 1;
             c.gridx = 2;
             c.anchor = GridBagConstraints.LINE_END;
             c.insets = new Insets(30, 15, 15, 15);
-            JLabel plot2_good = new JLabel(new ImageIcon("resources/img/plot_images/" + plotType2 + "_good.png"));
+            JLabel plot2_good = new JLabel(new ImageIcon(getClass().getResource("img/plot_images/" + plotType1 + "_good.png")));
             add(plot2_good, c);
 
             c.gridx = 3;
             c.anchor = GridBagConstraints.LINE_END;
             c.insets = new Insets(30, 15, 15, 15);
-            JLabel plot2_bad = new JLabel(new ImageIcon("resources/img/plot_images/" + plotType2 + "_good.png"));
+            JLabel plot2_bad = new JLabel(new ImageIcon(getClass().getResource("img/plot_images/" + plotType2 + "_good.png")));
             add(plot2_bad, c);
         }
 

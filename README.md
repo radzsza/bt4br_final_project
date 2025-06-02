@@ -18,7 +18,6 @@ Download the game.jar file and run it by either double-clicking on it or typing 
 Warning!
 You need jre version 24 or higher installed.
 
-
 ## Work distributiuon
 
 Aleksandra Radziukiewicz:  

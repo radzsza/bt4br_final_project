@@ -81,7 +81,7 @@ public class MainMenu extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(new ImageIcon("resources/img/background_images/background_meme.png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(new ImageIcon(getClass().getResource("/img/background_images/background_meme.png")).getImage(), 0, 0, getWidth(), getHeight(), this);
     }
 
 }

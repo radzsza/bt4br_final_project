@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="game:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66ac522f-e109-47d6-8ad5-fb68177f1075" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TextfileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../game.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/game_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/game.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/Density.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/barplot_bad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/barplot_good.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/boxplot_bad_pink.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/boxplot_goood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/heatmap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/heatmap_bad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/histogram_zly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/volcano_zly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/volkano_plot_good.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BackgroundPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackgroundPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MailPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlotLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextfileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextfileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +63,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/ola/final_project/game",
@@ -70,7 +72,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -157,7 +159,7 @@
       <workItem from="1748878368535" duration="1148000" />
       <workItem from="1748879529786" duration="837000" />
       <workItem from="1748880388307" duration="75000" />
-      <workItem from="1748880581534" duration="12230000" />
+      <workItem from="1748880581534" duration="16739000" />
     </task>
     <servers />
   </component>

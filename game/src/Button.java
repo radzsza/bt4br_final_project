@@ -51,7 +51,7 @@ public class Button extends JButton {
 
     @Override
     public void paintComponent(Graphics g) {
-        g.drawImage(new ImageIcon("resources/img/button.png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(new ImageIcon(getClass().getResource("img/button.png")).getImage(), 0, 0, getWidth(), getHeight(), this);
         super.paintComponent(g);
     }
 }

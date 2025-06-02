@@ -40,7 +40,7 @@ public class BackgroundPanel extends JPanel {
 
     @Override
     public void paint(Graphics g) {
-        g.drawImage(new ImageIcon("resources/img/background_images/" + filename + ".png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(new ImageIcon(getClass().getResource("/img/background_images/" + filename + ".png")).getImage(), 0, 0, getWidth(), getHeight(), this);
         super.paint(g);
     }
 }
