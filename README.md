@@ -2,7 +2,7 @@
 Aleksandra Radziukiewicz, Anastasiya Pautarak  
 
 We decided on a simple video game focused on hardships of starting with R and ggplot2 as a student. The game's 
-GUI is written in Java, using Swing. On the other hand, the displayed plots were made woth R ggplot2 and then 
+GUI is written in Java, using Swing. On the other hand, the displayed plots were made with R ggplot2 and then 
 incorporated into the project.
 
 ## Game plot:
