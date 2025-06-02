@@ -15,8 +15,9 @@ create good quality data visualization?
 
 Download the game.jar file and run it by either double-clicking on it or typing `java -jar game.jar`.
 
-Warning!
-You need jre version 24 or higher installed.
+**Warning!**
+
+**You need jre version 24 or higher installed.**
 
 ## Work distributiuon
 
