@@ -35,3 +35,14 @@ Anastazja:
 * grafika w tle - w tym któraś z już istniejących z wyświetlonym mailem na laptopie - done  
 * mail zwrotny - "please redo the plots"  
 * przeczytać kod i pobawić się nim - działa trochę więcej
+
+## Citations
+
+  @Book{,
+    author = {Hadley Wickham},
+    title = {ggplot2: Elegant Graphics for Data Analysis},
+    publisher = {Springer-Verlag New York},
+    year = {2016},
+    isbn = {978-3-319-24277-4},
+    url = {https://ggplot2.tidyverse.org},
+  }
