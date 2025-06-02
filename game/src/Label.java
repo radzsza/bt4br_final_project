@@ -18,4 +18,5 @@ public class Label extends JLabel {
         setFont(new Font("Monocraft", Font.BOLD, fontSize));
         setForeground(color);
     }
+
 }

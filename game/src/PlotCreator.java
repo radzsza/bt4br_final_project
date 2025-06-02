@@ -198,9 +198,9 @@ public class PlotCreator extends JPanel {
             nextButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    String nextName = "plot " + (plotNumber + 1);
+                    //String nextName = "plot " + (plotNumber + 1);
                     CardLayout cardLayout = (CardLayout) contentPane.getLayout();
-                    cardLayout.show(contentPane, nextName);
+                    cardLayout.next(contentPane);
                 }
             });
         }

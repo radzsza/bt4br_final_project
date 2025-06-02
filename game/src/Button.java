@@ -12,12 +12,6 @@ public class Button extends JButton {
     private Dimension size;
     private String text;
 
-    @Override
-    public void paintComponent(Graphics g) {
-        g.drawImage(new ImageIcon("src/resources/img/button.png").getImage(), 0, 0, getWidth(), getHeight(), this);
-        super.paintComponent(g);
-    }
-
     /**
      * class constructor
      * @param text - text to be displayed on the instance, works as in JButton
@@ -53,5 +47,11 @@ public class Button extends JButton {
         setBackground(Color.GRAY);
         setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 4));
         setBorderPainted(true);
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        g.drawImage(new ImageIcon("resources/img/button.png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        super.paintComponent(g);
     }
 }

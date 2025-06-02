@@ -7,11 +7,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Username extends JPanel {
-    private String username;
+    private String username = "Student";
 
     // TODO add return button in the lt corner
-    // probably add background image
-    // add a label greeting a player (if I have time)
 
     /**
      * class constructor
@@ -73,7 +71,7 @@ public class Username extends JPanel {
                     username = usernameField.getText();
                 }
                 CardLayout cardLayout = (CardLayout) contentPane.getLayout();
-                cardLayout.show(contentPane, "plot 0");
+                cardLayout.next(contentPane);
             }
         });
 

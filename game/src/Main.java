@@ -8,6 +8,7 @@ import java.awt.event.*;
 import java.io.*;
 
 public class Main {
+    private String user = "Student";
 
     public static void main(String[] args){
         setFont();
@@ -26,12 +27,14 @@ public class Main {
         JPanel contentPane = new JPanel(new CardLayout());
         JPanel mainMenu = new MainMenu(contentPane);
         JPanel username = new Username(contentPane);
+        JPanel mail0 = new MailPanel(contentPane, 0);
         JPanel plotCreation0 = new PlotCreator(contentPane, "BOXPLOT", 0);
         JPanel plotCreation1 = new PlotCreator(contentPane, "SCATTER PLOT 1", 1);
         JPanel plotCreation2 = new PlotCreator(contentPane, "SCATTER PLOT 2", 2);
 
         contentPane.add(mainMenu, "main menu");
         contentPane.add(username, "username");
+        contentPane.add(mail0, "mail 0");
         contentPane.add(plotCreation0, "plot 0");
         contentPane.add(plotCreation1, "plot 1");
         contentPane.add(plotCreation2, "plot 2");
@@ -46,7 +49,7 @@ public class Main {
      */
     private static void setFont(){
         try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("src/resources/font/Monocraft-Bold-05.ttf")).deriveFont(12f);
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("resources/font/Monocraft-Bold-05.ttf")).deriveFont(12f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(customFont);
         } catch (FontFormatException | IOException e) {

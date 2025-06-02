@@ -21,7 +21,7 @@ public class PlotLabel extends JLabel {
         this.colorPalette = colorPalette;
         this.theme = theme;
         this.plotNumber = plotNumber;
-        setIcon(new ImageIcon("src/resources/img/plot_images/" + theme + plotNumber + ".png"));
+        setIcon(new ImageIcon("resources/img/plot_images/" + theme + plotNumber + ".png"));
         setPreferredSize(new Dimension(getIcon().getIconWidth(), getIcon().getIconHeight()));
     }
 
@@ -31,7 +31,7 @@ public class PlotLabel extends JLabel {
      */
     public void setTheme(String theme) {
         this.theme = theme;
-        setIcon(new ImageIcon("src/resources/img/plot_images/" + theme + plotNumber + ".png"));
+        setIcon(new ImageIcon("resources/img/plot_images/" + theme + plotNumber + ".png"));
         repaint();
     }
 
@@ -57,7 +57,7 @@ public class PlotLabel extends JLabel {
 
     @Override
     public void paintComponent(Graphics g) {
-        g.drawImage(new ImageIcon("src/resources/img/plot_images/" + colorPalette + ".png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(new ImageIcon("resources/img/plot_images/" + colorPalette + ".png").getImage(), 0, 0, getWidth(), getHeight(), this);
         super.paintComponent(g);
     }
 

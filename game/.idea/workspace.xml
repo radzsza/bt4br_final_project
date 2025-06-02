@@ -5,41 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66ac522f-e109-47d6-8ad5-fb68177f1075" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MailPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/Monocraft-Bold-05.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/font/Monocraft-Bold-05.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/KOPERTA.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/KOPERTA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background_images/background_meme.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/background_images/background_meme.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background_images/obrazek_piwnica.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/background_images/obrazek_piwnica.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background_images/press_f.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/background_images/press_f.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background_images/version_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/background_images/version_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background_images/version_2_2_last.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/background_images/version_2_2_last.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background_images/version_2_last.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/background_images/version_2_last.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background_images/version_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/background_images/version_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background_images/without_koperta.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/background_images/without_koperta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/button.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/button.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/magma.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/minimal0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/plot_images/minimal0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/minimal1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/plot_images/minimal1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/minimal2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/plot_images/minimal2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/orange-turquoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/plot_images/orange-turquoise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/plasma.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/red-green.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/plot_images/red-green.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/terrain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/viridis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/plot_images/yellow-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/plot_images/yellow-blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/points.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/img/points.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComboBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComboBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Label.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlotCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlotLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlotTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RadioButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadioButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Username.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Username.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/ComboBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComboBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Label.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/MyColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/PlotCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/PlotLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/RadioButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadioButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Username.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Username.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/font/Monocraft-Bold-05.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/resources/font/Monocraft-Bold-05.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/KOPERTA.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/KOPERTA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/background_images/background_meme.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/background_images/background_meme.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/background_images/obrazek_piwnica.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/background_images/obrazek_piwnica.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/background_images/press_f.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/background_images/press_f.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/background_images/version_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/background_images/version_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/background_images/version_2_2_last.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/background_images/version_2_2_last.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/background_images/version_2_last.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/background_images/version_2_last.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/background_images/version_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/background_images/version_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/background_images/without_koperta.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/background_images/without_koperta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/button.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/plot_images/minimal0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/plot_images/minimal0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/plot_images/minimal1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/plot_images/minimal1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/plot_images/minimal2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/plot_images/minimal2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/plot_images/orange-turquoise.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/plot_images/orange-turquoise.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/plot_images/red-green.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/plot_images/red-green.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/plot_images/yellow-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/plot_images/yellow-blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/img/points.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,34 +59,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CardLayoutExample.executor": "Run",
-    "Application.Client.executor": "Run",
-    "Application.FlowLayoutDemo.executor": "Run",
-    "Application.GridBagLayoutImplement.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.PlotLabel.executor": "Run",
-    "Application.PlotTest.executor": "Run",
-    "Application.TestFrame.executor": "Run",
-    "Application.TestImg.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ola/final_project/game",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CardLayoutExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FlowLayoutDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GridBagLayoutImplement.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PlotLabel.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PlotTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestFrame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestImg.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ola/final_project/game&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" side_tool="true" />
@@ -99,7 +94,7 @@
       <window_info id="Backup and Sync History" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17890625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1783854" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="3" weight="0.32993728" />
@@ -112,8 +107,8 @@
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.32994187" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Services" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.32994187" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.3302696" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.32994187" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32994187" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32994187" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32994187" />
@@ -167,7 +162,13 @@
       <workItem from="1748793751632" duration="5100000" />
       <workItem from="1748804027031" duration="3441000" />
       <workItem from="1748809470465" duration="4137000" />
-      <workItem from="1748849627550" duration="15440000" />
+      <workItem from="1748849627550" duration="15946000" />
+      <workItem from="1748872565473" duration="5906000" />
+      <workItem from="1748878287802" duration="46000" />
+      <workItem from="1748878368535" duration="1148000" />
+      <workItem from="1748879529786" duration="837000" />
+      <workItem from="1748880388307" duration="75000" />
+      <workItem from="1748880581534" duration="189000" />
     </task>
     <servers />
   </component>
