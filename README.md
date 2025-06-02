@@ -7,7 +7,7 @@ incorporated into the project.
 
 ## Game plot:
 
-You are a student messaged by your lab supervisor. He sends you already prepared data and asks you to plot it. 
+You are a student messaged by your lab supervisor. He sends you already prepared data and asks you to plot it for him. 
 But don't worry, he also sends you a tutorial on how to make good plots. Will your skills and tools be enough to 
 create good quality data visualization?
 
