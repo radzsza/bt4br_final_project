@@ -23,7 +23,8 @@ You need jre version 24 or higher installed.
 Aleksandra Radziukiewicz:  
 * coding the GUI  
 * game logics implementation  
-* file management  
+* file management
+* description, including citations
 
 Anastasiya Pautarak:  
 
