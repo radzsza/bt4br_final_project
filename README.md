@@ -11,6 +11,14 @@ You are a student messaged by your lab supervisor. He sends you already prepared
 But don't worry, he also sends you a tutorial on how to make good plots. Will your skills and tools be enough to 
 create good quality data visualization?
 
+# Installing the game
+
+Download the game.jar file and run it by either double-clicking on it or typing `java -jar game.jar`.
+
+Warning!
+You need jre version 24 or higher installed.
+
+
 ## Work distributiuon
 
 Aleksandra Radziukiewicz:  
