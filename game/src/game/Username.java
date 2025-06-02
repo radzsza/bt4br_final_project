@@ -1,3 +1,7 @@
+/**
+ * Extends JPanel, creates a JPanel allowing to set username
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -9,6 +13,10 @@ public class Username extends JPanel {
     // probably add background image
     // add a label greeting a player (if I have time)
 
+    /**
+     * class constructor
+     * @param contentPane - see MainMenu contentPane
+     */
     public Username(JPanel contentPane) {
         setOpaque(true);
         setLayout(new GridBagLayout());
@@ -53,15 +61,8 @@ public class Username extends JPanel {
         c.gridx = 1;
         c.gridy = 2;
         c.insets = new Insets(10, 10, 10, 0);
-        //c.weighty = 0.5;
         c.anchor = GridBagConstraints.FIRST_LINE_END;
-        JButton startButton = getJButton(contentPane, usernameField);
-
-        add(startButton, c);
-    }
-
-    private JButton getJButton(JPanel contentPane, JTextField usernameField) {
-        JButton startButton = new Button("START", new Dimension(150, 60), 20);
+        Button startButton = new Button("START", new Dimension(150, 60), 20);
 
         startButton.addActionListener(new ActionListener() {
             @Override
@@ -75,9 +76,13 @@ public class Username extends JPanel {
                 cardLayout.show(contentPane, "plot 0");
             }
         });
-        return startButton;
+
+        add(startButton, c);
     }
 
+    /**
+     * @return username set by the user or "Student" if not set
+     */
     public String getUsername() {
         return username;
     }

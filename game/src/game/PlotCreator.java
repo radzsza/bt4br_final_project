@@ -1,15 +1,31 @@
+/**
+ * Class allowing the user to modify the displayed plots.
+ * Extends JPanel.
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class PlotCreator extends JPanel {
+
     final private String[] monocolorOptions = {"BLACK", "WHITE", "RED", "GREEN", "BLUE", "YELLOW", "ORANGE", "TURQUOISE"};
     final private String[] conditionBasedOptions = {"RED-GREEN", "YELLOW-BLUE", "ORANGE-TURQUOISE"};
-    final private String[] themeOptions = {"MINIMAL", "DARK", "BLACK-WHITE", "f", "g", "h", "i", "j"};
+    final private String[] themeOptions = {"MINIMAL", "BW", "LIGHT", "DARK", "CLASSIC"};
 
-    private ComboBox monoPaletteBox;
-    private ComboBox conditionPaletteBox;
+    // color palette combo boxes - declared as a field,
+    // so the action listeners in radio buttons can use them without making a mess in the constructor.
+    // I would probably add rest of the components as fields if it was functional, but as I submit it, it is not necessary.
+    private final ComboBox monoPaletteBox;
+    private final ComboBox conditionPaletteBox;
 
+    /**
+     * Class constructor
+     * @param contentPane - frame's contentPane with CardLayout - allows to switch JPanels with the use of JComponent's ActionListener
+     * @param plotTypeName - name of the displayed plot type
+     * @param plotNumber - plot's number - 0 is boxplot, 1 & 2 are two different scatter plots.
+     *                   I don't assume values higher than that (only 3 modifiable plots in the game)
+     */
     public PlotCreator(JPanel contentPane, String plotTypeName, int plotNumber) {
         setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
@@ -85,7 +101,11 @@ public class PlotCreator extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 monoPaletteBox.setVisible(true);
                 conditionPaletteBox.setVisible(false);
-                plotLabel.setMonoBackground(MyColor.getColor(monocolorOptions[0]));
+                try {
+                    plotLabel.setMonoBackground(MyColor.getColor(monoPaletteBox.getSelectedItem().toString()));
+                } catch (NullPointerException ex) {
+                    plotLabel.setMonoBackground(MyColor.getColor(monocolorOptions[0]));
+                }
             }
         });
         add(monoRadioButton, c);
@@ -101,7 +121,11 @@ public class PlotCreator extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 monoPaletteBox.setVisible(false);
                 conditionPaletteBox.setVisible(true);
-                plotLabel.setConditionBasedBackground(conditionBasedOptions[0].toLowerCase());
+                try {
+                    plotLabel.setConditionBasedBackground(conditionPaletteBox.getSelectedItem().toString().toLowerCase());
+                } catch (NullPointerException ex) {
+                    plotLabel.setConditionBasedBackground(conditionBasedOptions[0].toLowerCase());
+                }
             }
         });
         add(conditionRadioButton, c);
@@ -144,7 +168,7 @@ public class PlotCreator extends JPanel {
                 try {
                     plotLabel.setConditionBasedBackground(conditionPaletteBox.getSelectedItem().toString().toLowerCase());
                 } catch (NullPointerException ex) {
-                    conditionPaletteBox.setSelectedIndex(0);
+                    plotLabel.setConditionBasedBackground(conditionBasedOptions[0].toLowerCase());
                 }
             }
         });
@@ -158,6 +182,7 @@ public class PlotCreator extends JPanel {
         c.weightx = 1;
         c.insets = new Insets(0, 50, 30, 50);
         Button nextButton = new Button("NEXT", new Dimension(200, 80), 20);
+        nextButton.setPlotCreatorAesthetics();
         if (plotNumber == 2){
             nextButton.setText("SAVE AND SEND");
             nextButton.setPreferredSize(new Dimension(250, 80));

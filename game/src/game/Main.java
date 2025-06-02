@@ -1,3 +1,7 @@
+/**
+ * Allows to create and display games GUI.
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -11,7 +15,9 @@ public class Main {
         main.displayGUI();
     }
 
-    // method to display GUI using cardLayout (allows to switch frames)
+    /**
+     * Method used to create and display game's GUI
+     */
     private void displayGUI(){
         JFrame frame = new JFrame();
         frame.setPreferredSize(new Dimension(1600, 900));
@@ -35,9 +41,12 @@ public class Main {
         frame.setVisible(true);
     }
 
+    /**
+     * Adds a custom font - Monocraft to available fonts
+     */
     private static void setFont(){
         try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("font/Monocraft-Bold-05.ttf")).deriveFont(12f);
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("src/resources/font/Monocraft-Bold-05.ttf")).deriveFont(12f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(customFont);
         } catch (FontFormatException | IOException e) {

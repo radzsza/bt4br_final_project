@@ -1,16 +1,18 @@
+/**
+ * Main menu class.
+ * The class overrides the paintComponent() method to display its background image.
+ */
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class MainMenu extends JPanel {
-    /*
-    private JButton startButton;
-    private JButton githubButton;
-    private JButton aboutButton;
-    private JButton exitButton;
-    private JPanel contentPane;
-    */
 
+    /**
+     * @param contentPane - frame's contentPane with CardLayout - allows to switch JPanels with the use of JComponent's ActionListener
+     */
     public MainMenu(JPanel contentPane) {
         setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
@@ -64,9 +66,9 @@ public class MainMenu extends JPanel {
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(new ImageIcon("img/background_images/background_meme.png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(new ImageIcon("src/resources/img/background_images/background_meme.png").getImage(), 0, 0, getWidth(), getHeight(), this);
     }
 
 }

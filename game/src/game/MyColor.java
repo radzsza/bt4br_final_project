@@ -1,6 +1,15 @@
+/**
+ * Class used to get custom colors for the plots
+ */
+
 import java.awt.*;
 
 public class MyColor {
+
+    /**
+     * @param colorName - name of a color from the color palette ComboBoxes, uppercase
+     * @return - a custom color from the conditionBased color palettes
+     */
     public static Color getColor(String colorName) {
         return (switch (colorName) {
             case "BLACK" -> Color.BLACK;

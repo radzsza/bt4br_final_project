@@ -1,3 +1,8 @@
+/**
+ * Class extending JButton, mostly used to create button having the game aesthetics.
+ * Overrides paintComponent() to display a custom image.
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -9,10 +14,16 @@ public class Button extends JButton {
 
     @Override
     public void paintComponent(Graphics g) {
-        g.drawImage(new ImageIcon("img/button.png").getImage(), 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(new ImageIcon("src/resources/img/button.png").getImage(), 0, 0, getWidth(), getHeight(), this);
         super.paintComponent(g);
     }
 
+    /**
+     * class constructor
+     * @param text - text to be displayed on the instance, works as in JButton
+     * @param size - size to set the Button to, by setPreferredSize() from JButton
+     * @param fontSize - text's font size
+     */
     public Button(String text, Dimension size, int fontSize) {
         this.text = text;
         this.fontSize = fontSize;
@@ -21,9 +32,11 @@ public class Button extends JButton {
         setFocusPainted(false);
         setPreferredSize(size);
         setDefaultAesthetics();
-        // TODO add mouse listener, so the button graphically reacts to clicking and mouse movement in default aesthetics
     }
 
+    /**
+     * sets default aesthetics - pixel-like button image
+     */
     public void setDefaultAesthetics() {
         setOpaque(true);
         setContentAreaFilled(false);
@@ -32,11 +45,13 @@ public class Button extends JButton {
         setForeground(Color.WHITE);
     }
 
+    /**
+     * modifies the displayed aesthetics to plain gray body witt darker borders
+     */
     public void setPlotCreatorAesthetics() {
         setContentAreaFilled(true);
         setBackground(Color.GRAY);
         setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 4));
-        setFont(new Font("Monocraft", Font.BOLD, fontSize));
         setBorderPainted(true);
     }
 }
