@@ -26,18 +26,30 @@ public class Main {
 
         JPanel contentPane = new JPanel(new CardLayout());
         JPanel mainMenu = new MainMenu(contentPane);
-        JPanel username = new Username(contentPane);
+        JPanel backgroundStart = new BackgroundPanel(contentPane, "without_koperta");
+        JPanel backgroundMail = new BackgroundPanel(contentPane, "version_1");
         JPanel mail0 = new MailPanel(contentPane, 0);
         JPanel plotCreation0 = new PlotCreator(contentPane, "BOXPLOT", 0);
         JPanel plotCreation1 = new PlotCreator(contentPane, "SCATTER PLOT 1", 1);
         JPanel plotCreation2 = new PlotCreator(contentPane, "SCATTER PLOT 2", 2);
+        JPanel backgroundPostPlot = new BackgroundPanel(contentPane, "without_koperta");
+        JPanel backgroundPostPlot2 = new BackgroundPanel(contentPane, "version_1");
+        JPanel mail1 = new MailPanel(contentPane, 1);
+        JPanel defeatedBackground = new BackgroundPanel(contentPane, "defeated");
+        JPanel defeatedBackground2 = new BackgroundPanel(contentPane, "press_f");
 
         contentPane.add(mainMenu, "main menu");
-        contentPane.add(username, "username");
+        contentPane.add(backgroundStart, "background start");
+        contentPane.add(backgroundMail, "background mail");
         contentPane.add(mail0, "mail 0");
         contentPane.add(plotCreation0, "plot 0");
         contentPane.add(plotCreation1, "plot 1");
         contentPane.add(plotCreation2, "plot 2");
+        contentPane.add(backgroundPostPlot, "background post plot");
+        contentPane.add(backgroundPostPlot2, "background post plot");
+        contentPane.add(mail1, "mail 1");
+        contentPane.add(defeatedBackground, "defeated background");
+        contentPane.add(defeatedBackground2, "defeated background");
 
         frame.getContentPane().add(contentPane);
         frame.pack();

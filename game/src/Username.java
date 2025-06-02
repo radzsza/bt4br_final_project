@@ -1,5 +1,6 @@
 /**
  * Extends JPanel, creates a JPanel allowing to set username
+ * UNUSED
  */
 
 import javax.swing.*;

@@ -33,7 +33,7 @@ public class PlotCreator extends JPanel {
         // Big label with plot type, upper left corner
         c.gridx = 0;
         c.gridy = 0;
-        c.anchor = GridBagConstraints.FIRST_LINE_START;
+        c.anchor = GridBagConstraints.LAST_LINE_START;
         c.insets = new Insets(50, 50, 30, 30);
         JLabel plotTypeLabel = new Label(plotTypeName, 40, Color.BLACK);
         add(plotTypeLabel, c);
@@ -42,10 +42,8 @@ public class PlotCreator extends JPanel {
         c.gridx = 1;
         c.gridy = 0;
         c.gridheight = 9;
-        c.weightx = 1;
-        c.insets = new Insets(30, 50, 30, 30);
+        c.insets = new Insets(30, 50, 30, 50);
         c.anchor = GridBagConstraints.FIRST_LINE_END;
-        c.insets = new Insets(50, 50, 50, 30);
         PlotLabel plotLabel = new PlotLabel(themeOptions[0].toLowerCase(), conditionBasedOptions[0].toLowerCase(), plotNumber);
         add(plotLabel, c);
 
@@ -180,30 +178,20 @@ public class PlotCreator extends JPanel {
         c.anchor = GridBagConstraints.LAST_LINE_END;
         c.weighty = 1;
         c.weightx = 1;
-        c.insets = new Insets(0, 50, 30, 50);
+        c.insets = new Insets(0, 50, 15, 15);
         Button nextButton = new Button("NEXT", new Dimension(200, 80), 20);
         nextButton.setPlotCreatorAesthetics();
         if (plotNumber == 2){
             nextButton.setText("SAVE AND SEND");
             nextButton.setPreferredSize(new Dimension(250, 80));
-            nextButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    // TODO add panel after the last plot
-                    CardLayout cardLayout = (CardLayout) contentPane.getLayout();
-                    //cardLayout.show(contentPane, );
-                }
-            });
-        } else {
-            nextButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    //String nextName = "plot " + (plotNumber + 1);
-                    CardLayout cardLayout = (CardLayout) contentPane.getLayout();
-                    cardLayout.next(contentPane);
-                }
-            });
         }
+        nextButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout cardLayout = (CardLayout) contentPane.getLayout();
+                cardLayout.next(contentPane);
+            }
+        });
         add(nextButton, c);
     }
 

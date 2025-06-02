@@ -32,7 +32,7 @@ public class MainMenu extends JPanel {
             public void actionPerformed(ActionEvent e)
             {
                 CardLayout cardLayout = (CardLayout) contentPane.getLayout();
-                cardLayout.show(contentPane, "username");
+                cardLayout.show(contentPane, "background start");
             }
         });
 

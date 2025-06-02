@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class MailPanel extends JPanel {
-    // I would have used reading textfiles, but it does not cooperate
+    // I would have used reading textfiles, but it does not cooperate and I don't have enough time to fix it
     private String mail0 = """
             Subject: Data Visualization Task
 
@@ -43,6 +43,11 @@ public class MailPanel extends JPanel {
             Max Ruzz
             """;
 
+    /**
+     * Class constructor
+     * @param contentPane - as in MainMenu
+     * @param mailNumber - determines which mail field to use
+     */
     public MailPanel(JPanel contentPane, int mailNumber) {
 
         setLayout(new GridBagLayout());
@@ -52,8 +57,8 @@ public class MailPanel extends JPanel {
 
         c.gridx = 0;
         c.gridy = 0;
-        c.anchor = GridBagConstraints.FIRST_LINE_START;
-        c.insets = new Insets(30, 5, 15, 5);
+        c.anchor = GridBagConstraints.PAGE_START;
+        c.insets = new Insets(100, 5, 15, 15);
         JTextArea mail = new JTextArea();
         if (mailNumber == 0) {
             mail.setText(mail0);
@@ -64,10 +69,12 @@ public class MailPanel extends JPanel {
         mail.setFont(new Font("Monocraft", Font.BOLD, 20));
         add(mail, c);
 
+        // next button - goes to plots tutorial
         c.gridy = 1;
-        c.weighty = 1.0;
+        c.weighty = 1;
+        c.weightx = 1;
         c.anchor = GridBagConstraints.LAST_LINE_END;
-        c.insets = new Insets(30, 5, 30, 5);
+        c.insets = new Insets(30, 5, 15, 15);
         Button nextButton = new Button("NEXT", new Dimension(200, 80), 20);
         nextButton.addActionListener(new ActionListener() {
             @Override
