@@ -38,11 +38,6 @@ Anastazja:
 
 ## Citations
 
-  @Book{,
-    author = {Hadley Wickham},
-    title = {ggplot2: Elegant Graphics for Data Analysis},
-    publisher = {Springer-Verlag New York},
-    year = {2016},
-    isbn = {978-3-319-24277-4},
-    url = {https://ggplot2.tidyverse.org},
-  }
+* Wickham H (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. ISBN 978-3-319-24277-4, https://ggplot2.tidyverse.org.
+* Arnold, K, Gosling, J, & Holmes, D (2005). The Java programming language. Addison Wesley Professional.
+* Java™ Platform Standard Edition 24 Development Kit - JDK™ 24 (2025) https://docs.oracle.com/en/java/javase/24/
