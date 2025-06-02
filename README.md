@@ -1,15 +1,25 @@
 # Project outline
+Aleksandra Radziukiewicz, Anastasiya Pautarak  
 
-We decided on a simple video game focused on hardships of starting with R and ggplot2 as a student. The games 
-GUI is written in Java, using Swing.
+We decided on a simple video game focused on hardships of starting with R and ggplot2 as a student. The game's 
+GUI is written in Java, using Swing. On the other hand, the displayed plots were made woth R ggplot2 and then 
+incorporated into the project.
 
-Ola:
-* username - correct alignment, add labels - done  
-* plot rendering interface  
-	* debug color changing  
-	* create all 3 plot panels
-* card layout - switching panels to finish (adding all the panels and imgs)  
-* code comments even if the code is gibberish
+## Game plot:
+
+You are a student messaged by your lab supervisor. He sends you already prepared data and asks you to plot it. 
+But don't worry, he also sends you a tutorial on how to make good plots. Will your skills and tools be enough to 
+create good quality data visualization?
+
+## Work distributiuon
+
+Aleksandra Radziukiewicz:  
+* coding the GUI  
+* game logics implementation  
+* file management  
+
+Anastasiya Pautarak:  
+
 
 Anastazja:  
 * wykresy przykładowe - iris dataset?  
