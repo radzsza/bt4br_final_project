@@ -20,11 +20,15 @@ public class Main {
         JPanel contentPane = new JPanel(new CardLayout());
         JPanel mainMenu = new MainMenu(contentPane);
         JPanel username = new Username(contentPane);
-        JPanel plotCreation = new PlotCreator(contentPane, "BOXPLOT", 0);
+        JPanel plotCreation0 = new PlotCreator(contentPane, "BOXPLOT", 0);
+        JPanel plotCreation1 = new PlotCreator(contentPane, "SCATTER PLOT 1", 1);
+        JPanel plotCreation2 = new PlotCreator(contentPane, "SCATTER PLOT 2", 2);
 
         contentPane.add(mainMenu, "main menu");
         contentPane.add(username, "username");
-        contentPane.add(plotCreation, "plot creation 1");
+        contentPane.add(plotCreation0, "plot 0");
+        contentPane.add(plotCreation1, "plot 1");
+        contentPane.add(plotCreation2, "plot 2");
 
         frame.getContentPane().add(contentPane);
         frame.pack();

@@ -57,31 +57,35 @@ public class PlotLabel extends JLabel {
     }
     */
 
-    public PlotLabel(String colorPalette, String theme, int plotNumber) {
+    public PlotLabel(String theme, String colorPalette, int plotNumber) {
         this.colorPalette = colorPalette;
         this.theme = theme;
         this.plotNumber = plotNumber;
-        setPreferredSize(new Dimension(1003, 647));
         setIcon(new ImageIcon("img/plot_images/" + theme + plotNumber + ".png"));
-        //setPreferredSize(new Dimension(500, 500));
+        setPreferredSize(new Dimension(getIcon().getIconWidth(), getIcon().getIconHeight()));
     }
 
     public void setColorPalette(String colorPalette) {
         this.colorPalette = colorPalette;
+        repaint();
     }
 
     public void setTheme(String theme) {
         this.theme = theme;
         setIcon(new ImageIcon("img/plot_images/" + theme + plotNumber + ".png"));
+        repaint();
     }
 
     public void setMonoBackground(Color color) {
         setBackground(color);
         setOpaque(true);
+        repaint();
     }
 
-    public void setConditionBasedBackground() {
-        setOpaque(true);
+    public void setConditionBasedBackground(String colorPalette) {
+        this.colorPalette = colorPalette;
+        setOpaque(false);
+        repaint();
     }
 
     @Override

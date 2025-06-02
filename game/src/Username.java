@@ -72,7 +72,7 @@ public class Username extends JPanel {
                     username = usernameField.getText();
                 }
                 CardLayout cardLayout = (CardLayout) contentPane.getLayout();
-                cardLayout.show(contentPane, "plot creation 1");
+                cardLayout.show(contentPane, "plot 0");
             }
         });
         return startButton;

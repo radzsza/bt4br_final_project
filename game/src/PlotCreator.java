@@ -3,119 +3,183 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class PlotCreator extends JPanel {
-    final private String[] monocolorOptions = {"BLACK", "WHITE", "RED", "BLUE", "GREEN", "YELLOW", "PINK"};
-    final private String[] conditionBasedOptions = {"VIRIDIS", "MAGMA", "PLASMA", "INFERNO"};
-    final private String[] themeOptions = {"MINIMAL", "d", "e", "f", "g", "h", "i", "j"};
+    final private String[] monocolorOptions = {"BLACK", "WHITE", "RED", "GREEN", "BLUE", "YELLOW", "ORANGE", "TURQUOISE"};
+    final private String[] conditionBasedOptions = {"RED-GREEN", "YELLOW-BLUE", "ORANGE-TURQUOISE"};
+    final private String[] themeOptions = {"MINIMAL", "DARK", "BLACK-WHITE", "f", "g", "h", "i", "j"};
+
+    private ComboBox monoPaletteBox;
+    private ComboBox conditionPaletteBox;
 
     public PlotCreator(JPanel contentPane, String plotTypeName, int plotNumber) {
         setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
 
+        // Big label with plot type, upper left corner
         c.gridx = 0;
         c.gridy = 0;
         c.anchor = GridBagConstraints.FIRST_LINE_START;
-        c.insets = new Insets(30, 30, 30, 30);
+        c.insets = new Insets(50, 50, 30, 30);
         JLabel plotTypeLabel = new Label(plotTypeName, 40, Color.BLACK);
-        //plotTypeLabel.setFont(new Font("Monocraft", Font.BOLD, 40));
         add(plotTypeLabel, c);
 
-        // PLOT
+        // plot - default is minimal, red-green color palette
         c.gridx = 1;
         c.gridy = 0;
         c.gridheight = 9;
-        //c.weightx = 1;
+        c.weightx = 1;
         c.insets = new Insets(30, 50, 30, 30);
         c.anchor = GridBagConstraints.FIRST_LINE_END;
-        PlotLabel plotLabel = new PlotLabel("viridis", "minimal", plotNumber);
-        plotLabel.setMonoBackground(Color.PINK);
-        plotLabel.setOpaque(true);
+        c.insets = new Insets(50, 50, 50, 30);
+        PlotLabel plotLabel = new PlotLabel(themeOptions[0].toLowerCase(), conditionBasedOptions[0].toLowerCase(), plotNumber);
         add(plotLabel, c);
 
+        c.gridheight = 1;
+        // theme option chose through a combo box
+        // label
         c.gridx = 0;
         c.gridy = 1;
-        c.gridheight = 1;
-        c.insets = new Insets(0, 30, 10, 10);
         c.anchor = GridBagConstraints.LINE_START;
-        JLabel label1 = new Label("Theme:", 20, Color.GRAY);
-        add(label1, c);
+        c.insets = new Insets(0, 30, 10, 30);
+        Label themeLabel = new Label("Theme:", 20, Color.GRAY);
+        add(themeLabel, c);
 
+        // combo box
         c.gridy = 2;
-        c.insets = new Insets(0, 30, 10, 10);
         c.anchor = GridBagConstraints.LINE_START;
-        JComboBox<String> themeComboBox = new ComboBox(themeOptions);
-        themeComboBox.addActionListener(e -> {
-           plotLabel.setTheme(themeComboBox.getSelectedItem().toString().toLowerCase());
-        });
-        add(themeComboBox, c);
+        c.insets = new Insets(0, 30, 30, 30);
+        ComboBox themeBox = new ComboBox(themeOptions);
+        themeBox.setSelectedIndex(0);
 
-        c.gridy = 6;
-        c.insets = new Insets(30, 30, 10, 10);
-        c.anchor = GridBagConstraints.LINE_START;
-        JLabel colorLabel = new Label("Palette:", 20, Color.GRAY);
-        add(colorLabel, c);
-
-        c.gridy = 7;
-        c.anchor = GridBagConstraints.LINE_START;
-        c.insets = new Insets(0, 30, 10, 10);
-        JComboBox<String> colorChoice = new ComboBox(monocolorOptions);
-        colorChoice.addActionListener(e -> {
-            plotLabel.setMonoBackground(MyColor.getColor(colorChoice.getSelectedItem().toString()));
-        });
-
-        add(colorChoice, c);
-
-        ButtonGroup rbg = new ButtonGroup();
-        c.gridy = 3;
-        c.insets = new Insets(30, 30, 10, 10);
-        JLabel coloringMethodLabel = new Label("Coloring method:", 20, Color.GRAY);
-        add(coloringMethodLabel, c);
-
-        c.gridy = 4;
-        c.anchor = GridBagConstraints.LINE_START;
-        c.insets = new Insets(0, 30, 10, 10);
-        JRadioButton monocolorRadioButton = new RadioButton("MONOCOLOR", rbg);
-        monocolorRadioButton.setSelected(true);
-        monocolorRadioButton.addActionListener(new ActionListener() {
+        // action listener, so the combo box affects the plot
+        themeBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //colorChoice = new ComboBox(monocolorOptions);
+                try {
+                plotLabel.setTheme(themeBox.getSelectedItem().toString().toLowerCase());
+                } catch (NullPointerException ex) {
+                    plotLabel.setTheme(themeOptions[0]);
+                }
             }
         });
 
-        add(monocolorRadioButton, c);
+        add(themeBox, c);
 
+        // Coloring options - monocolor or condition based - 2 radio buttons
+        // button group - ensuring only one button is selected at the time
+        ButtonGroup rbg = new ButtonGroup();
+
+        // label
+        c.gridy = 3;
+        c.anchor = GridBagConstraints.LINE_START;
+        c.insets = new Insets(0, 30, 10, 30);
+        JLabel coloringLabel = new Label("Coloring:", 20, Color.GRAY);
+        add(coloringLabel, c);
+
+        // radio button 1 - monocolor
+        c.gridy = 4;
+        c.anchor = GridBagConstraints.LINE_START;
+        c.insets = new Insets(0, 30, 10, 30);
+        RadioButton monoRadioButton = new RadioButton("MONOCOLOR", rbg);
+        monoRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monoPaletteBox.setVisible(true);
+                conditionPaletteBox.setVisible(false);
+                plotLabel.setMonoBackground(MyColor.getColor(monocolorOptions[0]));
+            }
+        });
+        add(monoRadioButton, c);
+
+        //radio button 2 - condition based coloring
         c.gridy = 5;
         c.anchor = GridBagConstraints.LINE_START;
-        c.insets = new Insets(0, 30, 10, 10);
-        JRadioButton conditionBasedRadioButton = new RadioButton("CONDITION BASED", rbg);
-        add(conditionBasedRadioButton, c);
+        c.insets = new Insets(0, 30, 30, 30);
+        RadioButton conditionRadioButton = new RadioButton("CONDITION BASED", rbg);
+        conditionRadioButton.setSelected(true);
+        conditionRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monoPaletteBox.setVisible(false);
+                conditionPaletteBox.setVisible(true);
+                plotLabel.setConditionBasedBackground(conditionBasedOptions[0].toLowerCase());
+            }
+        });
+        add(conditionRadioButton, c);
 
-        /*
-        c.gridy = 8;
-        c.anchor = GridBagConstraints.FIRST_LINE_END;
-        c.insets = new Insets(30, 30, 10, 10);
-        Button applyButton = new Button("APPLY", new Dimension(400, 100), 20);
-        //applyButton.setPlotCreatorAesthetics();
-        add(applyButton, c);
-         */
+        // color palette (mono or condition based) - dynamic combo box
+        // label
+        c.gridy = 6;
+        c.anchor = GridBagConstraints.LINE_START;
+        c.insets = new Insets(0, 30, 10, 30);
+        Label paletteLabel = new Label("Color palette:", 20, Color.GRAY);
+        add(paletteLabel, c);
 
-        c.gridx = 1;
+        // combo boxes - 2 combo boxes for both coloring methods
+        // changing visibility depending on the coloring method
+        // combo box for monocolor palette
+        c.gridy = 7;
+        c.anchor = GridBagConstraints.LINE_START;
+        c.insets = new Insets(0, 30, 30, 30);
+        monoPaletteBox = new ComboBox(monocolorOptions);
+        monoPaletteBox.setSelectedIndex(0);
+        monoPaletteBox.addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               try {
+                   plotLabel.setMonoBackground(MyColor.getColor(monoPaletteBox.getSelectedItem().toString()));
+               } catch (NullPointerException ex) {
+                   plotLabel.setMonoBackground(MyColor.getColor(monocolorOptions[0]));
+               }
+           }
+        });
+        add(monoPaletteBox, c);
+        monoPaletteBox.setVisible(false);
+
+        // combo box for condition based palette
+        conditionPaletteBox = new ComboBox(conditionBasedOptions);
+        conditionPaletteBox.setSelectedIndex(0);
+        conditionPaletteBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    plotLabel.setConditionBasedBackground(conditionPaletteBox.getSelectedItem().toString().toLowerCase());
+                } catch (NullPointerException ex) {
+                    conditionPaletteBox.setSelectedIndex(0);
+                }
+            }
+        });
+        add(conditionPaletteBox, c);
+        conditionPaletteBox.setVisible(true);
+
         c.gridy = 9;
+        c.gridx = 1;
+        c.anchor = GridBagConstraints.LAST_LINE_END;
         c.weighty = 1;
         c.weightx = 1;
-        c.insets = new Insets(0, 30, 50, 50);
-        c.anchor = GridBagConstraints.LINE_END;
+        c.insets = new Insets(0, 50, 30, 50);
         Button nextButton = new Button("NEXT", new Dimension(200, 80), 20);
-        nextButton.setPlotCreatorAesthetics();
-        if (plotNumber == 2) {
-            nextButton.setText("SAVE");
+        if (plotNumber == 2){
+            nextButton.setText("SAVE AND SEND");
+            nextButton.setPreferredSize(new Dimension(250, 80));
+            nextButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // TODO add panel after the last plot
+                    CardLayout cardLayout = (CardLayout) contentPane.getLayout();
+                    //cardLayout.show(contentPane, );
+                }
+            });
+        } else {
+            nextButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    String nextName = "plot " + (plotNumber + 1);
+                    CardLayout cardLayout = (CardLayout) contentPane.getLayout();
+                    cardLayout.show(contentPane, nextName);
+                }
+            });
         }
         add(nextButton, c);
-
-
     }
 
-    private ImageIcon getPlot(String filename){
-        return new ImageIcon("img/" + filename + ".png");
-    }
 }

@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66ac522f-e109-47d6-8ad5-fb68177f1075" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/img/plot_images/minimal0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plot_images/orange-turquoise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plot_images/red-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plot_images/yellow-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PlotTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/plot_images/minimal0.png~RF12e325d.TMP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyColor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PlotCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PlotLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RadioButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadioButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Username.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Username.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +49,7 @@
     "Application.GridBagLayoutImplement.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PlotLabel.executor": "Run",
+    "Application.PlotTest.executor": "Run",
     "Application.TestFrame.executor": "Run",
     "Application.TestImg.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -67,7 +76,7 @@
       <window_info id="Backup and Sync History" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20130208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17890625" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="3" weight="0.32993728" />
@@ -77,13 +86,13 @@
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" weight="0.3302696" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.32994187" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Services" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.32994187" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.32994187" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.3302696" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32994187" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.33023483" />
+      <window_info active="true" anchor="bottom" id="TODO" order="8" visible="true" weight="0.32994187" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3302696" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="documentation.v2" show_stripe_button="false" side_tool="true" />
@@ -94,6 +103,11 @@
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
     </layout>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img/plot_images" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -127,7 +141,8 @@
       <workItem from="1748791057464" duration="377000" />
       <workItem from="1748793751632" duration="5100000" />
       <workItem from="1748804027031" duration="3441000" />
-      <workItem from="1748809470465" duration="3692000" />
+      <workItem from="1748809470465" duration="4137000" />
+      <workItem from="1748849627550" duration="8935000" />
     </task>
     <servers />
   </component>
