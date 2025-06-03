@@ -33,8 +33,9 @@ Anastasiya Pautarak:
 * Contributed to tutorial content
 * Edited graphics and visual interface elements to improve design and user experience
 * Refactored interface components to enhance clarity and consistency
+* Contributed to the Citation and Other Tools Used section
 
-## Other Tools Used
+## Other Tools Used for Graphics and Email Content
 
 * Illustrations used in the project were initially generated using ChatGPT’s image capabilities, but were heavily modified, redrawn, and finalized by Anastasiya Pautarak in Procreate to match the game’s visual style. 
 * Some of the in-game emails and other written content were initially drafted by Anastasiya Pautarak and partially revised by ChatGPT, which assisted in correcting language errors and improving clarity.
