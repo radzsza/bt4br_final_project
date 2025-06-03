@@ -51,6 +51,7 @@ Anastasiya Pautarak:
 * Arnold, K, Gosling, J, & Holmes, D (2005). The Java programming language. Addison Wesley Professional.
 * Java™ Platform Standard Edition 24 Development Kit - JDK™ 24 (2025) https://docs.oracle.com/en/java/javase/24/
 * Idrees Hassan Monocraft font https://github.com/IdreesInc/Monocraft
+* Lecture #6 Scientific Data visualization 1, Slides Lecture, https://pegaz.uj.edu.pl/course/view.php?id=683479
 * Savage Interactive. (2025). Procreate https://procreate.com
 * OpenAI. (2025). ChatGPT (June 3 version) [Large language and image model]. https://chat.openai.com
 * RDocumentation ggplot2 package https://www.rdocumentation.org/packages/ggplot2/versions/3.5.2
