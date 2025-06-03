@@ -28,15 +28,11 @@ Aleksandra Radziukiewicz:
 * description, including citations
 
 Anastasiya Pautarak:  
-
-
-Anastazja:  
-* wykresy przykładowe - iris dataset?  
-* zrobić wykresy poglądowe - TPMs_genes  
-* napisać draft maila "i just hate making plots" - done  
-* grafika w tle - w tym któraś z już istniejących z wyświetlonym mailem na laptopie - done  
-* mail zwrotny - "please redo the plots"  
-* przeczytać kod i pobawić się nim - działa trochę więcej
+* Developed data visualizations (iris dataset, TPM gene expression) using R
+* Designed and implemented in-game GUI elements and narrative emails
+* Contributed to tutorial content
+* Edited graphics and visual interface elements to improve design and user experience
+* Refactored interface components to enhance clarity and consistency
 
 ## Citations
 
