@@ -1,0 +1,71 @@
+---
+title: "Code used in the game:"
+author: "Prof. Max Ruzz"
+format:
+  html:
+    embed-resources: true
+    self-contained-math: true
+editor: visual
+---
+
+## Code used in the game for making plots:
+
+```{r}
+library(tidyverse)
+
+setwd("C:/Users/polto/python/toolkit/plot/Session_7/work_files/App_5")
+
+genes <- read_csv("TPMs_table_100genes.csv")
+map <- read_csv("Table_Symbl_Gene.csv")
+
+selected_genes <- c("aub", "Argk1")
+
+# id of the genes
+gene_ids <- map %>%
+  filter(SYMBOL %in% selected_genes) %>%
+  select(FLYBASE, SYMBOL)
+
+data <- genes %>%
+  filter(GeneID %in% gene_ids$FLYBASE) %>%
+  left_join(gene_ids, by = c("GeneID" = "FLYBASE")) %>%
+  pivot_longer(cols = starts_with("Control_") | starts_with("Treated_"),
+               names_to = "Sample", values_to = "TPM") %>%
+  mutate(Condition = if_else(str_detect(Sample, "Control"), "Control", "Treated"))
+
+# add different themes
+themes <- list(
+  classic = theme_classic(),
+  bw = theme_bw(),
+  light = theme_light(),
+  dark = theme_dark()
+)
+
+# BOXPLOT
+for (style in names(themes)) {
+  p <- ggplot(data, aes(x = interaction(SYMBOL, Condition), y = TPM)) +
+    stat_boxplot(geom = "errorbar", width = 0.3) +
+    geom_boxplot(fill = "lightblue", color = "black") +
+    labs(
+      title = "TPM Expression of Selected Genes (aub & Argk1)",
+      x = "Gene and condition", y = "TPM"
+    ) +
+    themes[[style]]
+  print(p)
+}
+
+# SCATTER PLOT
+for (gene in selected_genes) {
+  gene_data <- filter(data, SYMBOL == gene)
+  for (style in names(themes)) {
+    p <- ggplot(gene_data, aes(x = Condition, y = TPM)) +
+      geom_jitter(width = 0.2, size = 2, color = "darkred") +
+      labs(
+        title = paste("TPM Expression for", gene, ": Control vs Treated"),
+        y = "TPM", x = "Condition"
+      ) +
+      themes[[style]]
+    print(p)
+  }
+}
+
+```

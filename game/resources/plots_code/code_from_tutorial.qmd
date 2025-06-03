@@ -1,0 +1,143 @@
+---
+title: "Scientific Data Visualization: Do's and Don'ts"
+author: "Prof. Max Ruzz"
+format:
+  html:
+    embed-resources: true
+    self-contained-math: true
+editor: visual
+---
+
+# Effective Plotting in R
+
+This code demonstrates **good practices** and common **mistakes** when visualizing scientific data using `ggplot2` from tutorial.
+
+## Histogram with Density Overlay
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+set.seed(123)
+data <- data.frame(x = rnorm(1000, mean = 10, sd = 3))
+
+ggplot(data, aes(x)) +
+  geom_histogram(aes(y = ..density..), binwidth = 1, fill = "lightblue", color = "black") +
+  geom_density(color = "darkblue", size = 1.0) +
+  labs(title = "Distribution with Density Curve", x = "Value", y = "Density") +
+  theme_minimal()
+```
+
+## Histogram Without Density Scaling
+
+```{r}
+ggplot(data, aes(x)) +
+  geom_histogram(fill = "red") +
+  labs(title = "Histogram")
+
+```
+
+## Volcano Plot with Threshold Lines
+
+```{r}
+set.seed(42)
+volcano <- data.frame(
+  log2FC = rnorm(1000),
+  negLog10P = -log10(runif(1000, min = 0.0001, max = 0.1))
+)
+
+ggplot(volcano, aes(x = log2FC, y = negLog10P)) +
+  geom_point(alpha = 0.5, color = "darkgray") +
+  geom_vline(xintercept = c(-1, 1), linetype = "dashed", color = "red") +
+  geom_hline(yintercept = -log10(0.05), linetype = "dashed", color = "blue") +
+  labs(title = "Volcano Plot", x = "log2(Fold Change)", y = "-log10(p-value)") +
+  theme_minimal()
+
+```
+
+## Volcano Plot Without Thresholds
+
+```{r}
+ggplot(volcano, aes(x = log2FC, y = negLog10P)) +
+  geom_point(color = "green")
+
+```
+
+## Gene Expression Heatmap
+
+```{r}
+library(pheatmap)
+library(viridis)
+mat <- matrix(rnorm(100), nrow = 10)
+rownames(mat) <- paste("Gene", 1:10)
+colnames(mat) <- paste("Sample", 1:10)
+
+pheatmap(mat, scale = "row", color = viridis(100),
+         main = "Gene Expression Heatmap",
+         clustering_distance_rows = "euclidean",
+         clustering_distance_cols = "euclidean")
+
+```
+
+## Heatmap with Poor Color Gradient
+
+```{r}
+pheatmap(mat, color = colorRampPalette(c("white", "black"))(100))
+
+```
+
+## Boxplot with Raw Data Overlay
+
+```{r}
+library(ggplot2)
+
+df <- data.frame(
+  group = rep(c("Control", "Treatment"), each = 50),
+  value = c(rnorm(50, 5, 1), rnorm(50, 7, 1.5))
+)
+
+ggplot(df, aes(x = group, y = value, fill = group)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  scale_fill_manual(values = c("Control" = "#A8DADC", "Treatment" = "#F4A261")) +
+  labs(title = "Boxplot with Raw Data Points",
+       x = "Group", y = "Value") +
+  theme_minimal()
+
+
+```
+
+## Oversimplified Boxplot
+
+```{r}
+ggplot(df, aes(x = group, y = value)) +
+  geom_boxplot(fill = "pink")
+
+```
+
+## Barplot with Standard Error
+
+This type of plot **does not show underlying data distribution**; for small sample sizes or skewed data, it can be misleading.
+
+```{r}
+df2 <- data.frame(
+  condition = c("A", "B", "C"),
+  mean = c(3, 5, 4),
+  se = c(0.5, 0.7, 0.6)
+)
+
+ggplot(df2, aes(x = condition, y = mean, fill = condition)) +
+  geom_bar(stat = "identity", color = "black", width = 0.6) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2) +
+  scale_fill_viridis_d() +
+  labs(title = "Barplot with Standard Error", x = "Condition", y = "Mean") +
+  theme_minimal()
+
+```
+
+## Barplot Without Error Bars or Group Distinction
+
+```{r}
+ggplot(df2, aes(x = condition, y = mean)) +
+  geom_bar(stat = "identity")
+
+```
