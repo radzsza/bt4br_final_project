@@ -107,7 +107,7 @@ public class TextPanel extends JPanel {
             c.gridx = 2;
             c.anchor = GridBagConstraints.LINE_END;
             c.insets = new Insets(30, 15, 15, 15);
-            JLabel plot2_good = new JLabel(new ImageIcon(getClass().getResource("img/plot_images/" + plotType1 + "_good.png")));
+            JLabel plot2_good = new JLabel(new ImageIcon(getClass().getResource("img/plot_images/" + plotType2 + "_good.png")));
             add(plot2_good, c);
 
             c.gridx = 3;
